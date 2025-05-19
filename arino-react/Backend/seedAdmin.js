@@ -15,16 +15,16 @@ const seedAdmin = async () => {
     });
 
     // 🔍 This email check must match the one you're creating below
-    const existing = await AdminUser.findOne({ email: 'onnescryogenics@gmail.com' });
+    const existing = await AdminUser.findOne({ email: '@gmail.com' });
     if (existing) {
       console.log('⚠️ Admin already exists');
       return process.exit(0);
     }
 
-    const hashedPassword = await bcrypt.hash('%Test*(1987!', 10);
+    const hashedPassword = await bcrypt.hash('', 10);
 
     const admin = new AdminUser({
-      email: 'onnescryogenics@gmail.com', // ✅ MATCHED HERE
+      email: '@gmail.com', // ✅ MATCHED HERE
       password: hashedPassword,
     });
 
